@@ -28,19 +28,16 @@ if (numberPrompt === "y") {
 if (lowerPrompt === "y") {
   base = base + lower;
   console.log (base)
-
 }
 
 if (upperPrompt === "y") {
   base = base + upper;
   console.log (base)
-
 }
 
 if (specialPrompt === "y") {
   base = base + special;
   console.log (base)
-
 }
 
 if (numberPrompt === "" && lowerPrompt === "" && upperPrompt === "" && specialPrompt === "") {
@@ -54,24 +51,17 @@ if (numberPrompt === "" && lowerPrompt === "" && upperPrompt === "" && specialPr
   password = value + password;
   }
 window.alert('your password is'+ ' ' + password);
-
 }
-
-
-
-
-
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+var password = generatePassword();
+var passwordText = document.querySelector("#password");
 
   passwordText.value = password;
-
 }
 
 // Add event listener to generate button
