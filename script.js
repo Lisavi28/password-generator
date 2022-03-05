@@ -4,21 +4,27 @@ var number = "0123456789"
 var lower = "abcdefghijklmnopqrstuvwxyz";
 var upper = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var special = "!#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-var base = "";
 
 var writePassword = function () {
+  var base = "";
+
+//first prompt
+
   window.alert("Welcome to Password generator, please choose the criteria for your password ");
-  var lengthPrompt = window.prompt('How many dont characters do you need your password to be? Please enter a number from 8 to 128');
+  var lengthPrompt = window.prompt('How many characters do you need your password to be? Please enter a number from 8 to 128');
 
 if (lengthPrompt < 8 ||lengthPrompt > 128) {
     window.alert ("Please enter a value between 8 and  128")
     return writePassword();
 }
 
+//Retrieve information
+
 var numberPrompt = window.prompt('Would you like your password to contain numbers? Y / N'); numberPrompt = numberPrompt.toLowerCase();
 var lowerPrompt = window.prompt('Would you like your password to contain lowercase characters? Y / N'); lowerPrompt = lowerPrompt.toLowerCase();
 var upperPrompt = window.prompt('Would you like your password to contain UPPERCASE characters? Y / N'); upperPrompt = upperPrompt.toLowerCase();
 var specialPrompt = window.prompt('Would you like your password to contain Special characters (=%$+)? Y / N'); specialPrompt = specialPrompt.toLowerCase();
+
 
 if (numberPrompt === "y") {
   base = base + number;
@@ -39,6 +45,7 @@ if (specialPrompt === "y") {
   base = base + special;
   console.log (base)
 }
+//null case
 
 if (numberPrompt === "" && lowerPrompt === "" && upperPrompt === "" && specialPrompt === "") {
   window.alert("you have to choose at least one criteria");
